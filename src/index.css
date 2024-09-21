@@ -1,0 +1,79 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Poppins", "sans serif";
+}
+body {
+  display: flex;
+  position: relative;
+  @apply text-white bg-[#1f1f31]; /* Default styles for light mode */
+  width: 100%;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.dark body {
+  @apply bg-[#1f1f31];
+}
+
+body.light {
+  @apply bg-white text-black; /* Styles for light mode */
+}
+
+body.dark {
+  @apply bg-1p text-white; /* Styles for dark mode */
+}
+/* .icon-sun:before {
+  content: "\e9d4";
+  font-size: 18px;
+}
+.icon-moon-o:before {
+  content: "\f186";
+  font-size: 18px;
+} */
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/***************************************************************************/
+/********************************** Hero ************************************/
+/***************************************************************************/
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+.image-container {
+  padding: 4px;
+  position: relative;
+  display: inline-block;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-bottom-color: rgb(30, 228, 255);
+  border-top-color: rgb(2, 154, 255);
+  animation: spin 2s linear infinite;
+}
+
+.hero-image {
+  display: block;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
